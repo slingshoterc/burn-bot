@@ -2,6 +2,8 @@ const ethers = require("ethers");
 const chalk = require("chalk");
 const dotenv = require('dotenv');
 dotenv.config();
+const TelegramBot = require('node-telegram-bot-api');
+const tg = new TelegramBot(process.env.TG_TOKEN)
 
 const ISlingABI = require("./abi/ISling.json");
 
@@ -44,7 +46,13 @@ const sendAlert = async (event) => {
     const tokenContract = new ethers.Contract( slingContract, ISlingABI, fakeWallet );
     const deadBalance = await tokenContract.balanceOf(deadWallet);
 
-    logInfo(`NEW BURN!! \n Amount Burned: ${Math.trunc(ethers.utils.formatUnits(event.data, 18))} \n Total Burn Amount: ${Math.trunc(ethers.utils.formatUnits(deadBalance, 18))}`)
+    tg.sendAnimation(process.env.CHAT_ID, "CgACAgQAAx0CYzb8-gADAmNLsq7sMQf8wJTkLyOjP0yqAnjGAALCAgACrvAMU9nhcS8gimueKgQ", {caption : `NEW BURN!! \n Amount Burned: ${Math.trunc(ethers.utils.formatUnits(event.data, 18)).toLocaleString("en-US")} \n Total Burn Amount: ${Math.trunc(ethers.utils.formatUnits(deadBalance, 18)).toLocaleString("en-US")}`})
+    .then(res => {
+      console.log('Done!');
+    })
+    .catch(err => {
+      console.log('Error:', err);
+    });
 }
 
 const main = async () => {
