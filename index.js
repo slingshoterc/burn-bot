@@ -3,7 +3,7 @@ const chalk = require("chalk");
 const dotenv = require('dotenv');
 dotenv.config();
 
-const ISling = require("./abi/ISling.json");
+const ISlingABI = require("./abi/ISling.json");
 
 const logWarn = (...args) => { console.log(chalk.hex("#FFA500")(...args)); };
 const logSuccess = (...args) => { console.log(chalk.green(...args)); };
@@ -36,12 +36,15 @@ const slingContract = "0x5a79BE6CDcE26bc853d72919bF98A0378641b607"
 const deadWallet = "0x000000000000000000000000000000000000dEaD"
 const fakeWallet = new ethers.Wallet("0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80", provider) // Private Key for Publicly Known Account ... DO NOT USE!!
 
-const sendAlert = async (from, to, amount) => {
-    if (!match(to, deadWallet)) { return }
-    const tokenContract = new ethers.Contract( slingContract, [ 'function balanceOf(address account) public view returns (uint256)', ], fakeWallet );
+const sendAlert = async (event) => {
+
+    const toAddress = ethers.utils.defaultAbiCoder.decode(['address'], event.topics[2]).toString()
+    if (!match(toAddress, deadWallet))  { return; } 
+
+    const tokenContract = new ethers.Contract( slingContract, ISlingABI, fakeWallet );
     const deadBalance = await tokenContract.balanceOf(deadWallet);
 
-    logInfo(`NEW BURN!! \n Amount Burned: ${ethers.utils.formatUnits(amount, 18)} \n Total Burn Amount: ${ethers.utils.formatUnits(deadBalance, 18)}`)
+    logInfo(`NEW BURN!! \n Amount Burned: ${ethers.utils.formatUnits(event.data, 18)} \n Total Burn Amount: ${ethers.utils.formatUnits(deadBalance, 18)}`)
 }
 
 const main = async () => {
@@ -51,8 +54,8 @@ const main = async () => {
         topics: [ ethers.utils.id("Transfer(address,address,uint256)") ]
     }
 
-    provider.on(filter, (from, to, amount) => {
-        sendAlert(from, to, amount).catch((e) => {
+    provider.on(filter, (event) => {
+        sendAlert(event).catch((e) => {
             logFatal(`Error: ${JSON.stringify(e)}`);
           })
     })
