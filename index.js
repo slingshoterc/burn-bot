@@ -6,6 +6,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const tg = new TelegramBot(process.env.TG_TOKEN);
 
 const ISlingABI = require("./abi/ISling.json");
+const fireEmoji = "\u{1F525}";
 
 const logWarn = (...args) => {
   console.log(chalk.hex("#FFA500")(...args));
@@ -73,19 +74,23 @@ const sendAlert = async (event) => {
   );
   const deadBalance = await tokenContract.balanceOf(deadWallet);
   const totalSupply = await tokenContract.totalSupply();
-  const percentageDead = (deadBalance / totalSupply) * 100;
+  const percentageDead = ((deadBalance / totalSupply) * 100).toFixed(2);
 
   tg.sendAnimation(
     process.env.CHAT_ID,
-    "CgACAgQAAx0CYzb8-gADAmNLsq7sMQf8wJTkLyOjP0yqAnjGAALCAgACrvAMU9nhcS8gimueKgQ",
+    "BAACAgQAAx0CZk4yhwACAb1jTE_GgP9-LYXqyt0d4t0zYZdpygACnQsAAsiQYVLatKHbax56CioE",
     {
-      caption: `:fire: **NEW $SLING BURN!** :fire: \n\n :fire: **Amount Burned:** :fire: \n ${Math.trunc(
+      caption: `${fireEmoji} <b>NEW $SLING BURN!</b> ${fireEmoji} \n\n ${fireEmoji} <b>Amount Burned:</b> ${fireEmoji} \n ${Math.trunc(
         ethers.utils.formatUnits(event.data, 18)
       ).toLocaleString(
         "en-US"
-      )} \n \n :fire: **Total Burn Amount:** :fire: \n ${Math.trunc(
+      )} \n \n ${fireEmoji} <b>Total Burn Amount:</b> ${fireEmoji} \n ${Math.trunc(
         ethers.utils.formatUnits(deadBalance, 18)
-      ).toLocaleString("en-US")} ${percentageDead}%`,
+      ).toLocaleString(
+        "en-US"
+      )} (${percentageDead}%) \n\n<a href="${slingTelegram}">Powered by $SLING</a>`,
+      parse_mode: "HTML",
+      allow_sending_without_reply: true,
       reply_markup: JSON.stringify({
         inline_keyboard: [
           [
@@ -97,8 +102,7 @@ const sendAlert = async (event) => {
           ]
         ],
         remove_keyboard: true
-      }),
-      allow_sending_without_reply: true
+      })
     }
   )
     .then((res) => {
