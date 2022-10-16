@@ -45,8 +45,10 @@ const sendAlert = async (event) => {
 
     const tokenContract = new ethers.Contract( slingContract, ISlingABI, fakeWallet );
     const deadBalance = await tokenContract.balanceOf(deadWallet);
+    const totalSupply = await tokenContract.totalSupply()
+    const percentageDead = (deadBalance / totalSupply) * 100
 
-    tg.sendAnimation(process.env.CHAT_ID, "CgACAgQAAx0CYzb8-gADAmNLsq7sMQf8wJTkLyOjP0yqAnjGAALCAgACrvAMU9nhcS8gimueKgQ", {caption : `NEW BURN!! \n Amount Burned: ${Math.trunc(ethers.utils.formatUnits(event.data, 18)).toLocaleString("en-US")} \n Total Burn Amount: ${Math.trunc(ethers.utils.formatUnits(deadBalance, 18)).toLocaleString("en-US")}`})
+    tg.sendAnimation(process.env.CHAT_ID, "CgACAgQAAx0CYzb8-gADAmNLsq7sMQf8wJTkLyOjP0yqAnjGAALCAgACrvAMU9nhcS8gimueKgQ", {caption: `:fire: **NEW $SLING BURN!** :fire: \n\n :fire: **Amount Burned:** :fire: \n ${Math.trunc(ethers.utils.formatUnits(event.data, 18)).toLocaleString("en-US")} \n \n :fire: **Total Burn Amount:** :fire: \n ${Math.trunc(ethers.utils.formatUnits(deadBalance, 18)).toLocaleString("en-US")} ${percentageDead}%`})
     .then(res => {
       console.log('Done!');
     })
