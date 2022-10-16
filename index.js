@@ -33,7 +33,7 @@ const match = (a, b, caseIncensitive = true) => {
 
 const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL);
 const slingContract = "0x5a79BE6CDcE26bc853d72919bF98A0378641b607"
-const deadWallet = "0x000000000000000000000000000000000000dead"
+const deadWallet = "0x000000000000000000000000000000000000dEaD"
 const fakeWallet = new ethers.Wallet("0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80", provider) // Private Key for Publicly Known Account ... DO NOT USE!!
 
 const sendAlert = async (from, to, amount) => {
@@ -41,7 +41,7 @@ const sendAlert = async (from, to, amount) => {
     const tokenContract = new ethers.Contract( slingContract, [ 'function balanceOf(address account) public view returns (uint256)', ], fakeWallet );
     const deadBalance = await tokenContract.balanceOf(deadWallet);
 
-    logInfo(`NEW BURN!! \n Amount Burned: ${ethers.utils.formatUnits(amount, 18)} Total Burn Amount: ${ethers.utils.formatUnits(deadBalance, 18)} \n `)
+    logInfo(`NEW BURN!! \n Amount Burned: ${ethers.utils.formatUnits(amount, 18)} \n Total Burn Amount: ${ethers.utils.formatUnits(deadBalance, 18)}`)
 }
 
 const main = async () => {
