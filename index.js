@@ -44,7 +44,7 @@ const sendAlert = async (event) => {
     const tokenContract = new ethers.Contract( slingContract, ISlingABI, fakeWallet );
     const deadBalance = await tokenContract.balanceOf(deadWallet);
 
-    logInfo(`NEW BURN!! \n Amount Burned: ${ethers.utils.formatUnits(event.data, 18)} \n Total Burn Amount: ${ethers.utils.formatUnits(deadBalance, 18)}`)
+    logInfo(`NEW BURN!! \n Amount Burned: ${Math.trunc(ethers.utils.formatUnits(event.data, 18))} \n Total Burn Amount: ${Math.trunc(ethers.utils.formatUnits(deadBalance, 18))}`)
 }
 
 const main = async () => {
