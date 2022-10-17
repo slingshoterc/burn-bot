@@ -12,7 +12,7 @@ const projects = {
       "https://www.dextools.io/app/ether/pair-explorer/0x2c43f5288a9a64cbebe39070e6f65f582f7c7433",
     media:
       "BAACAgQAAx0CZk4yhwACAb1jTE_GgP9-LYXqyt0d4t0zYZdpygACnQsAAsiQYVLatKHbax56CioE",
-    chatId: -1001664548090
+    chatId: -1001715624415
   }
 };
 
