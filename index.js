@@ -64,7 +64,7 @@ const sendAlert = async (event) => {
   const projectChatId = project.chatId;
   const projectMedia = project.media;
   const projectTelegram = project.telegram;
-  const projectChart = project.chart;
+  const projectBuyLink = project.buyLink;
   const projectTicker = project.ticker;
 
   const toAddress = ethers.utils.defaultAbiCoder
@@ -98,10 +98,10 @@ const sendAlert = async (event) => {
     reply_markup: JSON.stringify({
       inline_keyboard: [
         [
-          { text: "Join chat", url: projectTelegram },
+          { text: "Join Chat", url: projectTelegram },
           {
-            text: "Chart",
-            url: projectChart
+            text: "Buy Now",
+            url: projectBuyLink
           }
         ]
       ],

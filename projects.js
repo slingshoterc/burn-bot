@@ -8,11 +8,11 @@ const projects = {
     ticker: "$SLING",
     telegram: "https://t.me/slingshotportal",
     contract: "0x5a79be6cdce26bc853d72919bf98a0378641b607",
-    chart:
-      "https://www.dextools.io/app/ether/pair-explorer/0x2c43f5288a9a64cbebe39070e6f65f582f7c7433",
     media:
       "BAACAgQAAx0CZk4yhwACAb1jTE_GgP9-LYXqyt0d4t0zYZdpygACnQsAAsiQYVLatKHbax56CioE",
-    chatId: -1001715624415
+    chatId: -1001715624415,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x5a79be6cdce26bc853d72919bf98a0378641b607&use=v2&chain=mainnet"
   }
 };
 
