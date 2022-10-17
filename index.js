@@ -92,7 +92,7 @@ const sendAlert = async (event) => {
       ethers.utils.formatUnits(deadBalance, 18)
     ).toLocaleString(
       "en-US"
-    )} (${percentageDead}%) \n\n<a href="${slingTelegram}">Powered by $SLING</a>`,
+    )} (${percentageDead}%) \n\n<a href="${slingTelegram}"><i>Powered by $SLING</i></a>`,
     parse_mode: "HTML",
     allow_sending_without_reply: true,
     reply_markup: JSON.stringify({

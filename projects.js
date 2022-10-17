@@ -13,17 +13,6 @@ const projects = {
     media:
       "BAACAgQAAx0CZk4yhwACAb1jTE_GgP9-LYXqyt0d4t0zYZdpygACnQsAAsiQYVLatKHbax56CioE",
     chatId: -1001664548090
-  },
-  "0x0cba60ca5ef4d42f92a5070a8fedd13be93e2861": {
-    name: "The protocol",
-    ticker: "$THE",
-    telegram: "https://t.me/the_communitytg",
-    contract: "0x0cba60ca5ef4d42f92a5070a8fedd13be93e2861",
-    chart:
-      "https://www.dextools.io/app/ether/pair-explorer/0xf29450019834d7874b4e306275c4334326ac27f1",
-    chatId: -1001664548090,
-    media:
-      "CgACAgQAAx0CYzb8-gADAmNLsq7sMQf8wJTkLyOjP0yqAnjGAALCAgACrvAMU9nhcS8gimueKgQ"
   }
 };
 
