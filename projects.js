@@ -46,6 +46,17 @@ const projects = {
     chatId: -1001866506529,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd804d1270BA889636822e018A88D0a3DBe83E18a&use=v2&chain=mainnet"
+  },
+  "0x837556300973e496e220bd9cb0ec701cdde9d3ef": {
+    name: "APED",
+    ticker: "$APED",
+    telegram: "https://t.me/Apedportal",
+    contract: "0x837556300973e496e220bd9cb0ec701cdde9d3ef",
+    media:
+      "BAACAgEAAx0CYzb8-gADoWNWNrWuUNSK5cPT9lvQErpkMUi4AAJIAgAC0YexRqRxmj7qiT69KgQ",
+    chatId: -1001841312251,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x837556300973e496e220bd9cb0ec701cdde9d3ef&use=v2&chain=mainnet"
   }
 };
 
