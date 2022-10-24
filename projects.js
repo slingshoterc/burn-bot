@@ -35,6 +35,17 @@ const projects = {
     chatId: -1001671138082,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x82c2f739f4af3b401a9f78d9a0d6844db485f098&use=v2&chain=mainnet"
+  },
+  "0xd804d1270BA889636822e018A88D0a3DBe83E18a": {
+    name: "The ElonYe protocol",
+    ticker: "$ElonYe",
+    telegram: "https://t.me/ElonyeProtocolETH",
+    contract: "0xd804d1270BA889636822e018A88D0a3DBe83E18a",
+    media:
+      "BAACAgEAAx0CYzb8-gADoWNWNrWuUNSK5cPT9lvQErpkMUi4AAJIAgAC0YexRqRxmj7qiT69KgQ",
+    chatId: -1001866506529,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd804d1270BA889636822e018A88D0a3DBe83E18a&use=v2&chain=mainnet"
   }
 };
 
