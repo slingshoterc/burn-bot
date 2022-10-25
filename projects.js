@@ -38,7 +38,7 @@ const projects = {
   },
   "0xd804d1270BA889636822e018A88D0a3DBe83E18a": {
     name: "The ElonYe protocol",
-    ticker: "$ElonYe",
+    ticker: "$ELONYE",
     telegram: "https://t.me/ElonyeProtocolETH",
     contract: "0xd804d1270BA889636822e018A88D0a3DBe83E18a",
     media:
