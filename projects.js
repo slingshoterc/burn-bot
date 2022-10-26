@@ -36,16 +36,16 @@ const projects = {
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x82c2f739f4af3b401a9f78d9a0d6844db485f098&use=v2&chain=mainnet"
   },
-  "0xd804d1270BA889636822e018A88D0a3DBe83E18a": {
+  "0xd804d1270ba889636822e018a88d0a3dbe83e18a": {
     name: "The ElonYe protocol",
     ticker: "$ELONYE",
     telegram: "https://t.me/ElonyeProtocolETH",
-    contract: "0xd804d1270BA889636822e018A88D0a3DBe83E18a",
+    contract: "0xd804d1270ba889636822e018a88d0a3dbe83e18a",
     media:
       "BAACAgEAAx0CYzb8-gADoWNWNrWuUNSK5cPT9lvQErpkMUi4AAJIAgAC0YexRqRxmj7qiT69KgQ",
     chatId: -1001866506529,
     buyLink:
-      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd804d1270BA889636822e018A88D0a3DBe83E18a&use=v2&chain=mainnet"
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd804d1270ba889636822e018a88d0a3dbe83e18a&use=v2&chain=mainnet"
   },
   "0x837556300973e496e220bd9cb0ec701cdde9d3ef": {
     name: "APED",
