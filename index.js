@@ -68,8 +68,7 @@ const sendAlert = async (event) => {
       ethers.utils.formatUnits(event.data, decimals)
     ).toLocaleString("en-US")} ($${Math.trunc(
       ethers.utils.formatUnits(dollarAmount, 6)
-    ).toLocaleString("en-US")})
-    \n \n ${fireEmoji} <b>Total Burn Amount:</b> ${fireEmoji} \n ${Math.trunc(
+    ).toLocaleString("en-US")}) \n\n ${fireEmoji} <b>Total Burn Amount:</b> ${fireEmoji} \n ${Math.trunc(
       ethers.utils.formatUnits(deadBalance, decimals)
     ).toLocaleString("en-US")} (${percentageDead}%) ($${Math.trunc(
       ethers.utils.formatUnits(totalDollarsBurned, 6)
