@@ -2,11 +2,12 @@ const ethers = require("ethers");
 const chalk = require("chalk");
 const dotenv = require("dotenv");
 dotenv.config();
-const subscribedProjects = require("./projects").projects;
+const subscribedProjects = require("./src/projects").projects;
 const TelegramBot = require("node-telegram-bot-api");
+const { calcDollarAmount } = require("./src/utils")
 
 const tg = new TelegramBot(process.env.TG_TOKEN);
-const ISlingABI = require("./abi/ISling.json");
+const ISlingABI = require("./src/abi/ISling.json");
 const fireEmoji = "\u{1F525}";
 const slingTelegram = "https://t.me/slingshotportal";
 
@@ -83,12 +84,17 @@ const sendAlert = async (event) => {
   const totalSupply = await tokenContract.totalSupply();
   const percentageDead = ((deadBalance / totalSupply) * 100).toFixed(2);
 
+  const dollarAmount = calcDollarAmount(contractAddress, event.data)
+
   tg.sendAnimation(projectChatId, projectMedia, {
     caption: `${fireEmoji} <b>NEW ${projectTicker} BURN!</b> ${fireEmoji} \n\n ${fireEmoji} <b>Amount Burned:</b> ${fireEmoji} \n ${Math.trunc(
       ethers.utils.formatUnits(event.data, 18)
     ).toLocaleString(
       "en-US"
-    )} \n \n ${fireEmoji} <b>Total Burn Amount:</b> ${fireEmoji} \n ${Math.trunc(
+    )} - $${Math.trunc(ethers.utils.formatUnits(dollarAmount, 6)).toLocaleString(
+      "en-US"
+    )} 
+    \n \n ${fireEmoji} <b>Total Burn Amount:</b> ${fireEmoji} \n ${Math.trunc(
       ethers.utils.formatUnits(deadBalance, 18)
     ).toLocaleString(
       "en-US"
@@ -109,7 +115,7 @@ const sendAlert = async (event) => {
     })
   })
     .then((res) => {
-      console.log("Done!");
+      console.log(`New Burn Posted for ${projectTicker}`);
     })
     .catch((err) => {
       console.log("Error:", err);
