@@ -43,8 +43,8 @@ const sendAlert = async (event) => {
   const percentageDead = ((deadBalance / totalSupply) * 100).toFixed(2);
   const decimals = await tokenContract.decimals()
 
-  const dollarAmount = calcDollarAmount(contractAddress, event.data)
-  const totalDollarsBurned = calcDollarAmount(contractAddress, totalSupply)
+  const dollarAmount = await calcDollarAmount(contractAddress, event.data)
+  const totalDollarsBurned = await calcDollarAmount(contractAddress, totalSupply)
 
   tg.sendAnimation(projectChatId, projectMedia, {
     caption: `${fireEmoji} <b>NEW ${projectTicker} BURN!</b> ${fireEmoji} \n\n ${fireEmoji} <b>Amount Burned:</b> ${fireEmoji} \n ${Math.trunc(
