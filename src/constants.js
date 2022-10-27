@@ -18,4 +18,12 @@ const CONTRACTS = {
     UNIV3_ROUTER: "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45",
 }
 
-module.exports = { provider, fakeWallet, TOKENS, CONTRACTS }
+const IUniV2RouterABI = require("./abi/IUniswapV2Router.json");
+      
+const uniswapV2Contract = new ethers.Contract(
+    CONTRACTS.UNIV2_ROUTER,
+    IUniV2RouterABI,
+    fakeWallet
+);
+
+module.exports = { provider, fakeWallet, TOKENS, CONTRACTS, uniswapV2Contract }

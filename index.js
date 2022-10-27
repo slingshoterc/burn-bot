@@ -11,27 +11,7 @@ const ISlingABI = require("./src/abi/ISling.json");
 const fireEmoji = "\u{1F525}";
 const slingTelegram = "https://t.me/slingshotportal";
 
-const logWarn = (...args) => {
-  console.log(chalk.hex("#FFA500")(...args));
-};
-const logSuccess = (...args) => {
-  console.log(chalk.green(...args));
-};
-const logInfo = (...args) => {
-  console.log(chalk.yellow(...args));
-};
-const logError = (...args) => {
-  console.log(chalk.red(...args));
-};
-const logTrace = (...args) => {
-  console.log(chalk.grey(...args));
-};
-const logDebug = (...args) => {
-  console.log(chalk.magenta(...args));
-};
-const logFatal = (...args) => {
-  console.log(chalk.redBright(...args));
-};
+const { logWarn, logSuccess, logInfo, logError, logTrace, logDebug, logFatal } = require("./src/logger")
 
 const match = (a, b, caseIncensitive = true) => {
   if (a === null || a === undefined) return false;

@@ -1,4 +1,4 @@
-const { provider, fakeWallet, TOKENS, CONTRACTS } = require("./constants")
+const { provider, fakeWallet, TOKENS, CONTRACTS, uniswapV2Contract } = require("./constants")
 
 const calcPairAddress = async (token0, token1) => {
 
@@ -13,14 +13,6 @@ const calcPairAddress = async (token0, token1) => {
 }
 
 const calcDollarAmount = async (token, amount) => {
-    const IUniV2RouterABI = require("./abi/IUniswapV2Router.json");
-      
-    const uniswapV2Contract = new ethers.Contract(
-        CONTRACTS.UNIV2_ROUTER,
-        IUniV2RouterABI,
-        fakeWallet
-    );
-
     // Find Weth Value
     const path = [token, TOKENS.WETH]
     const getAmounts = await uniswapV2Contract.getAmountsOut(amount, path)
@@ -28,7 +20,7 @@ const calcDollarAmount = async (token, amount) => {
 
     // Convert Weth to USD
     const wethUsdcPath = [TOKENS.WETH, TOKENS.USDC]
-    const getUsdcAmounts = await uniswapV2Contract.getAmountsOut(wethOut, wethUsdcPath)
+    const getUsdcAmounts = await uniswapV2Contract.getAmountsOut(wethReturned, wethUsdcPath)
     const usdcReturned = getUsdcAmounts[1]
 
     return usdcReturned;
