@@ -41,20 +41,21 @@ const sendAlert = async (event) => {
   const deadBalance = await tokenContract.balanceOf(deadWallet);
   const totalSupply = await tokenContract.totalSupply();
   const percentageDead = ((deadBalance / totalSupply) * 100).toFixed(2);
+  const decimals = await tokenContract.decimals()
 
   const dollarAmount = calcDollarAmount(contractAddress, event.data)
   const totalDollarsBurned = calcDollarAmount(contractAddress, totalSupply)
 
   tg.sendAnimation(projectChatId, projectMedia, {
     caption: `${fireEmoji} <b>NEW ${projectTicker} BURN!</b> ${fireEmoji} \n\n ${fireEmoji} <b>Amount Burned:</b> ${fireEmoji} \n ${Math.trunc(
-      ethers.utils.formatUnits(event.data, 18)
+      ethers.utils.formatUnits(event.data, decimals)
     ).toLocaleString(
       "en-US"
     )} - $${Math.trunc(ethers.utils.formatUnits(dollarAmount, 6)).toLocaleString(
       "en-US"
     )} 
     \n \n ${fireEmoji} <b>Total Burn Amount:</b> ${fireEmoji} \n ${Math.trunc(
-      ethers.utils.formatUnits(deadBalance, 18)
+      ethers.utils.formatUnits(deadBalance, decimals)
     ).toLocaleString(
       "en-US"
     )} (${percentageDead}%) \n  - $${Math.trunc(ethers.utils.formatUnits(totalDollarsBurned, 6)).toLocaleString(
