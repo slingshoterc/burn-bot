@@ -7,6 +7,24 @@ const {
   uniswapV2Contract
 } = require("./constants");
 
+const match = (a, b, caseIncensitive = true) => {
+    if (a === null || a === undefined) return false;
+  
+    if (Array.isArray(b)) {
+      if (caseIncensitive) {
+        return b.map((x) => x.toLowerCase()).includes(a.toLowerCase());
+      }
+  
+      return b.includes(a);
+    }
+  
+    if (caseIncensitive) {
+      return a.toLowerCase() === b.toLowerCase();
+    }
+  
+    return a === b;
+  };
+
 const calcPairAddress = async (token0, token1) => {
   const uniswapV2Factory = new ethers.Contract(
     "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
@@ -37,4 +55,4 @@ const calcDollarAmount = async (token, amount) => {
   return usdcReturned;
 };
 
-module.exports = { calcDollarAmount, calcPairAddress };
+module.exports = { calcDollarAmount, calcPairAddress, match };

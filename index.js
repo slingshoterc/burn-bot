@@ -4,39 +4,17 @@ const dotenv = require("dotenv");
 dotenv.config();
 const subscribedProjects = require("./src/projects").projects;
 const TelegramBot = require("node-telegram-bot-api");
-const { calcDollarAmount } = require("./src/utils")
+
+const { calcDollarAmount, match } = require("./src/utils")
+const { provider, fakeWallet, TOKENS, CONTRACTS, uniswapV2Contract } = require("./src/constants")
+const { logWarn, logSuccess, logInfo, logError, logTrace, logDebug, logFatal } = require("./src/logger")
 
 const tg = new TelegramBot(process.env.TG_TOKEN);
 const ISlingABI = require("./src/abi/ISling.json");
 const fireEmoji = "\u{1F525}";
 const slingTelegram = "https://t.me/slingshotportal";
 
-const { logWarn, logSuccess, logInfo, logError, logTrace, logDebug, logFatal } = require("./src/logger")
-
-const match = (a, b, caseIncensitive = true) => {
-  if (a === null || a === undefined) return false;
-
-  if (Array.isArray(b)) {
-    if (caseIncensitive) {
-      return b.map((x) => x.toLowerCase()).includes(a.toLowerCase());
-    }
-
-    return b.includes(a);
-  }
-
-  if (caseIncensitive) {
-    return a.toLowerCase() === b.toLowerCase();
-  }
-
-  return a === b;
-};
-
-const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL);
 const deadWallet = "0x000000000000000000000000000000000000dEaD";
-const fakeWallet = new ethers.Wallet(
-  "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
-  provider
-); // Private Key for Publicly Known Account ... DO NOT USE!!
 
 const sendAlert = async (event) => {
   const contractAddress = event.address;
@@ -65,6 +43,7 @@ const sendAlert = async (event) => {
   const percentageDead = ((deadBalance / totalSupply) * 100).toFixed(2);
 
   const dollarAmount = calcDollarAmount(contractAddress, event.data)
+  const totalDollarsBurned = calcDollarAmount(contractAddress, totalSupply)
 
   tg.sendAnimation(projectChatId, projectMedia, {
     caption: `${fireEmoji} <b>NEW ${projectTicker} BURN!</b> ${fireEmoji} \n\n ${fireEmoji} <b>Amount Burned:</b> ${fireEmoji} \n ${Math.trunc(
@@ -78,7 +57,9 @@ const sendAlert = async (event) => {
       ethers.utils.formatUnits(deadBalance, 18)
     ).toLocaleString(
       "en-US"
-    )} (${percentageDead}%) \n\n<a href="${slingTelegram}"><i>Powered by $SLING</i></a>`,
+    )} (${percentageDead}%) \n  - $${Math.trunc(ethers.utils.formatUnits(totalDollarsBurned, 6)).toLocaleString(
+      "en-US"
+    )} \n\n<a href="${slingTelegram}"><i>Powered by $SLING</i></a>`,
     parse_mode: "HTML",
     allow_sending_without_reply: true,
     reply_markup: JSON.stringify({
