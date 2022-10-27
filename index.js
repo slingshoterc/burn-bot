@@ -5,9 +5,23 @@ dotenv.config();
 const subscribedProjects = require("./src/projects").projects;
 const TelegramBot = require("node-telegram-bot-api");
 
-const { calcDollarAmount, match } = require("./src/utils")
-const { provider, fakeWallet, TOKENS, CONTRACTS, uniswapV2Contract } = require("./src/constants")
-const { logWarn, logSuccess, logInfo, logError, logTrace, logDebug, logFatal } = require("./src/logger")
+const { calcDollarAmount, match } = require("./src/utils");
+const {
+  provider,
+  fakeWallet,
+  TOKENS,
+  CONTRACTS,
+  uniswapV2Contract
+} = require("./src/constants");
+const {
+  logWarn,
+  logSuccess,
+  logInfo,
+  logError,
+  logTrace,
+  logDebug,
+  logFatal
+} = require("./src/logger");
 
 const tg = new TelegramBot(process.env.TG_TOKEN);
 const ISlingABI = require("./src/abi/ISling.json");
@@ -41,26 +55,27 @@ const sendAlert = async (event) => {
   const deadBalance = await tokenContract.balanceOf(deadWallet);
   const totalSupply = await tokenContract.totalSupply();
   const percentageDead = ((deadBalance / totalSupply) * 100).toFixed(2);
-  const decimals = await tokenContract.decimals()
+  const decimals = await tokenContract.decimals();
 
-  const dollarAmount = await calcDollarAmount(contractAddress, event.data)
-  const totalDollarsBurned = await calcDollarAmount(contractAddress, totalSupply)
+  const dollarAmount = await calcDollarAmount(contractAddress, event.data);
+  const totalDollarsBurned = await calcDollarAmount(
+    contractAddress,
+    totalSupply
+  );
 
   tg.sendAnimation(projectChatId, projectMedia, {
     caption: `${fireEmoji} <b>NEW ${projectTicker} BURN!</b> ${fireEmoji} \n\n ${fireEmoji} <b>Amount Burned:</b> ${fireEmoji} \n ${Math.trunc(
       ethers.utils.formatUnits(event.data, decimals)
-    ).toLocaleString(
-      "en-US"
-    )} - $${Math.trunc(ethers.utils.formatUnits(dollarAmount, 6)).toLocaleString(
-      "en-US"
-    )} 
+    ).toLocaleString("en-US")} ($${Math.trunc(
+      ethers.utils.formatUnits(dollarAmount, 6)
+    ).toLocaleString("en-US")})
     \n \n ${fireEmoji} <b>Total Burn Amount:</b> ${fireEmoji} \n ${Math.trunc(
       ethers.utils.formatUnits(deadBalance, decimals)
+    ).toLocaleString("en-US")} (${percentageDead}%) ($${Math.trunc(
+      ethers.utils.formatUnits(totalDollarsBurned, 6)
     ).toLocaleString(
       "en-US"
-    )} (${percentageDead}%) \n  - $${Math.trunc(ethers.utils.formatUnits(totalDollarsBurned, 6)).toLocaleString(
-      "en-US"
-    )} \n\n<a href="${slingTelegram}"><i>Powered by $SLING</i></a>`,
+    )}) \n\n<a href="${slingTelegram}"><i>Powered by $SLING</i></a>`,
     parse_mode: "HTML",
     allow_sending_without_reply: true,
     reply_markup: JSON.stringify({
