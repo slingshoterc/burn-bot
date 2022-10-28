@@ -8,6 +8,8 @@ const fakeWallet = new ethers.Wallet(
   provider
 ); 
 
+const tgAuthToken = process.env.TG_TOKEN
+
 const TOKENS = {
     WETH: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     USDC: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -26,4 +28,4 @@ const uniswapV2Contract = new ethers.Contract(
     fakeWallet
 );
 
-module.exports = { provider, fakeWallet, TOKENS, CONTRACTS, uniswapV2Contract }
+module.exports = { provider, fakeWallet, TOKENS, CONTRACTS, uniswapV2Contract, tgAuthToken }

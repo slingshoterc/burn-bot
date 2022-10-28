@@ -1,7 +1,4 @@
 const ethers = require("ethers");
-const chalk = require("chalk");
-const dotenv = require("dotenv");
-dotenv.config();
 const subscribedProjects = require("./src/projects").projects;
 const TelegramBot = require("node-telegram-bot-api");
 
@@ -11,7 +8,8 @@ const {
   fakeWallet,
   TOKENS,
   CONTRACTS,
-  uniswapV2Contract
+  uniswapV2Contract,
+  tgAuthToken
 } = require("./src/constants");
 const {
   logWarn,
@@ -23,7 +21,7 @@ const {
   logFatal
 } = require("./src/logger");
 
-const tg = new TelegramBot(process.env.TG_TOKEN);
+const tg = new TelegramBot(tgAuthToken);
 const ISlingABI = require("./src/abi/ISling.json");
 const fireEmoji = "\u{1F525}";
 const slingTelegram = "https://t.me/slingshotportal";
