@@ -57,6 +57,17 @@ const projects = {
     chatId: -1001841312251,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x837556300973e496e220bd9cb0ec701cdde9d3ef&use=v2&chain=mainnet"
+  },
+  "0x4b9f500ed7c571fca3bf049b877faa0ba131fc76": {
+    name: "MWII",
+    ticker: "$MWII",
+    telegram: "https://t.me/CallOfDutyERC",
+    contract: "0x4b9f500ed7c571fca3bf049b877faa0ba131fc76",
+    media:
+      "BAACAgQAAx0CcB6ytwADX2Nb7ieuIRNJB5DhdBNlDwSHT-PwAAIVDgACcX_hUikhgPsQi0eFKgQ",
+    chatId: -1001636614336,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x4b9f500ed7c571fca3bf049b877faa0ba131fc76&use=v2&chain=mainnet"
   }
 };
 
