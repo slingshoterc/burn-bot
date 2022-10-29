@@ -68,6 +68,17 @@ const projects = {
     chatId: -1001636614336,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x4b9f500ed7c571fca3bf049b877faa0ba131fc76&use=v2&chain=mainnet"
+  },
+  "0xd763151f6224cf8e3cb0ea0649f0c1ed4d0fe5aa": {
+    name: "NODIP",
+    ticker: "$NODIP",
+    telegram: "https://t.me/NODIPCommunity",
+    contract: "0xd763151f6224cf8e3cb0ea0649f0c1ed4d0fe5aa",
+    media:
+      "CgACAgQAAx0CcB6ytwADYWNc2-Q-XBjRoKo_ryUkkeDmHyQkAAJvDQACcX_pUgKg-LJaHOrRKgQ",
+    chatId: -1001730471922,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd763151f6224cf8e3cb0ea0649f0c1ed4d0fe5aa&use=v2&chain=mainnet"
   }
 };
 
