@@ -24,9 +24,7 @@ const getTokens = (req, res) => {
     });
   }
 
-  sendJSONresponse(res, 200, {
-    data: supportedTokens
-  });
+  sendJSONresponse(res, 200, supportedTokens);
 };
 
 const getToken = async (req, res) => {
@@ -57,7 +55,7 @@ const getToken = async (req, res) => {
     }
   };
 
-  sendJSONresponse(res, 200, { data: payload });
+  sendJSONresponse(res, 200, payload);
 };
 
 module.exports = { getTokens, getToken };
