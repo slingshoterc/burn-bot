@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
   });
 });
 
-router.use("/tokens", tokenCtrl.getTokens);
-router.use("/token/:token", tokenCtrl.getToken);
+router.get("/tokens", tokenCtrl.getTokens);
+router.get("/tokens/:token", tokenCtrl.getToken);
 
 module.exports = router;
