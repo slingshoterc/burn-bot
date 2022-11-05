@@ -79,6 +79,17 @@ const projects = {
     chatId: -1001730471922,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd763151f6224cf8e3cb0ea0649f0c1ed4d0fe5aa&use=v2&chain=mainnet"
+  },
+  "0x96313947f453efdfb31549f7ad19a870dcb9a508": {
+    name: "Verified Doge",
+    ticker: "$VDOGE",
+    telegram: "https://t.me/verifieddogeportal",
+    contract: "0x96313947f453efdfb31549f7ad19a870dcb9a508",
+    media:
+      "CgACAgQAAx0CcB6ytwADYWNc2-Q-XBjRoKo_ryUkkeDmHyQkAAJvDQACcX_pUgKg-LJaHOrRKgQ",
+    chatId: -1001831003530,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x96313947f453efdfb31549f7ad19a870dcb9a508&use=v2&chain=mainnet"
   }
 };
 
