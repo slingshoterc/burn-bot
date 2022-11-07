@@ -90,6 +90,17 @@ const projects = {
     chatId: -1001831003530,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x96313947f453efdfb31549f7ad19a870dcb9a508&use=v2&chain=mainnet"
+  },
+  "0xd031edafac6a6ae5425e77f936022e506444c242": {
+    name: "TSANGNYON",
+    ticker: "$TSANGNYON",
+    telegram: "https://t.me/tsangnyonentry",
+    contract: "0xd031edafac6a6ae5425e77f936022e506444c242",
+    media:
+      "CgACAgQAAx0CcB6ytwADYWNc2-Q-XBjRoKo_ryUkkeDmHyQkAAJvDQACcX_pUgKg-LJaHOrRKgQ",
+    chatId: -1001826940145,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd031edafac6a6ae5425e77f936022e506444c242&use=v2&chain=mainnet"
   }
 };
 
