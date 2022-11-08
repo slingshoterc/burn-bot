@@ -61,6 +61,8 @@ const sendAlert = async (event) => {
     totalSupply
   );
 
+  const slingBrandIdentifier = `\n<a href="${slingTelegram}"><i>Powered by $SLING</i></a>`;
+
   tg.sendAnimation(projectChatId, projectMedia, {
     caption: `${fireEmoji} <b>NEW ${projectTicker} BURN!</b> ${fireEmoji} \n\n ${fireEmoji} <b>Amount Burned:</b> ${fireEmoji} \n ${Math.trunc(
       ethers.utils.formatUnits(event.data, decimals)
@@ -72,9 +74,7 @@ const sendAlert = async (event) => {
       ethers.utils.formatUnits(deadBalance, decimals)
     ).toLocaleString("en-US")} (${percentageDead}%) ($${Math.trunc(
       ethers.utils.formatUnits(totalDollarsBurned, 6)
-    ).toLocaleString(
-      "en-US"
-    )}) \n\n<a href="${slingTelegram}"><i>Powered by $SLING</i></a>`,
+    ).toLocaleString("en-US")}) \n`,
     parse_mode: "HTML",
     allow_sending_without_reply: true,
     reply_markup: JSON.stringify({
