@@ -86,7 +86,7 @@ const projects = {
     telegram: "https://t.me/verifieddogeportal",
     contract: "0x96313947f453efdfb31549f7ad19a870dcb9a508",
     media:
-      "CgACAgQAAx0CcB6ytwADYWNc2-Q-XBjRoKo_ryUkkeDmHyQkAAJvDQACcX_pUgKg-LJaHOrRKgQ",
+      "CgACAgQAAx0CcB6ytwACAUtjb6DzgUnWOwpOdEi-pd6EVrWXZgACtQoAAgUdgVPL4M9RAAE2Vv0rBA",
     chatId: -1001831003530,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x96313947f453efdfb31549f7ad19a870dcb9a508&use=v2&chain=mainnet"
