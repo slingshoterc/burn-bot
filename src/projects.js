@@ -20,7 +20,7 @@ const projects = {
     telegram: "https://t.me/runestonetoken",
     contract: "0xc68a4c68f17fed266a5e39e7140650acadfe78f8",
     media:
-      "CgACAgEAAxkBAAEZKmtjUCFW6SU5iwxqiAPQZOL0kVOmfgACQQIAAiZYgUZR1-Hz6ryv3yoE",
+      "CgACAgQAAx0CcB6ytwACAXBjb6wlhujPpKZd0TSdQN5shbE4yAACuQoAAgUdgVN1BVdcs2uHvysE",
     chatId: -1001371904199,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xc68a4c68f17fed266a5e39e7140650acadfe78f8&use=v2&chain=mainnet"
