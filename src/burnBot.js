@@ -58,7 +58,7 @@ const sendAlert = async (event) => {
   const dollarAmount = await calcDollarAmount(contractAddress, event.data);
   const totalDollarsBurned = await calcDollarAmount(
     contractAddress,
-    totalSupply
+    deadBalance
   );
 
   const slingBrandIdentifier = `\n<a href="${slingTelegram}"><i>Powered by $SLING</i></a>`;
