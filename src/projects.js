@@ -101,6 +101,17 @@ const projects = {
     chatId: -1001826940145,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd031edafac6a6ae5425e77f936022e506444c242&use=v2&chain=mainnet"
+  },
+  "0x59203358d7ddfe80e0abe75b0aa534bc4d22aa7f": {
+    name: "FOCCER TOKEN",
+    ticker: "$FOCCER",
+    telegram: "https://t.me/FOCCERTOKEN",
+    contract: "0x59203358d7ddfe80e0abe75b0aa534bc4d22aa7f",
+    media:
+      "CgACAgQAAx0CcB6ytwACAUhjb55F8ZlSLKPsI3USQq8RN4qiZQACsgoAAgUdgVN2do2Y2PCqBCsE",
+    chatId: -1001823998854,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x59203358d7ddfe80e0abe75b0aa534bc4d22aa7f&use=v2&chain=mainnet"
   }
 };
 
