@@ -112,6 +112,17 @@ const projects = {
     chatId: -1001823998854,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x59203358d7ddfe80e0abe75b0aa534bc4d22aa7f&use=v2&chain=mainnet"
+  },
+  "0x4a10abd5f2b9bd278ac6df80bcf7e6f01c97305b": {
+    name: "CONTAGION",
+    ticker: "$CONT",
+    telegram: "https://t.me/contagionerc20",
+    contract: "0x4a10abd5f2b9bd278ac6df80bcf7e6f01c97305b",
+    media:
+      "BAACAgQAAx0CcB6ytwACAbBjdBvzOFKCmB9IDbCDqOiOEjf2_gACNA4AAoffqFOE4qaqU2IF-isE",
+    chatId: -1001825732689,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x4a10abd5f2b9bd278ac6df80bcf7e6f01c97305b&use=v2&chain=mainnet"
   }
 };
 
