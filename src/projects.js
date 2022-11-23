@@ -102,6 +102,17 @@ const projects = {
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd031edafac6a6ae5425e77f936022e506444c242&use=v2&chain=mainnet"
   },
+  "0x5f49e1b5ee9a34a9ad553ac2cca1f908c62c776a": {
+    name: "ANIMA",
+    ticker: "$ANIMA",
+    telegram: "https://t.me/tsangnyonentry",
+    contract: "0x5f49e1b5ee9a34a9ad553ac2cca1f908c62c776a",
+    media:
+      "CgACAgQAAx0CcB6ytwADYWNc2-Q-XBjRoKo_ryUkkeDmHyQkAAJvDQACcX_pUgKg-LJaHOrRKgQ",
+    chatId: -1001826940145,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x5f49e1b5ee9a34a9ad553ac2cca1f908c62c776a&use=v2&chain=mainnet"
+  },
   "0x59203358d7ddfe80e0abe75b0aa534bc4d22aa7f": {
     name: "FOCCER TOKEN",
     ticker: "$FOCCER",
