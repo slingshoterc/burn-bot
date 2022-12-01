@@ -134,6 +134,17 @@ const projects = {
     chatId: -1001825732689,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x4a10abd5f2b9bd278ac6df80bcf7e6f01c97305b&use=v2&chain=mainnet"
+  },
+  "0xa48e53e0cfd9f146c5ff6be26cb646dc0c8b21fb": {
+    name: "BLAZE",
+    ticker: "$BLAZE",
+    telegram: "https://t.me/blazedragonportal",
+    contract: "0xa48e53e0cfd9f146c5ff6be26cb646dc0c8b21fb",
+    media:
+      "BAACAgQAAx0CcB6ytwACAiljiIFjsLZkH6NYI0NRLM4IY5ci5gACiCAAApHrQFDztq0ciHRUxysE",
+    chatId: -1001842493016,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xa48e53e0cfd9f146c5ff6be26cb646dc0c8b21fb&use=v2&chain=mainnet"
   }
 };
 
