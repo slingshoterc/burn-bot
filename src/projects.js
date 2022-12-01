@@ -145,6 +145,17 @@ const projects = {
     chatId: -1001842493016,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xa48e53e0cfd9f146c5ff6be26cb646dc0c8b21fb&use=v2&chain=mainnet"
+  },
+  "0x8ee325ae3e54e83956ef2d5952d3c8bc1fa6ec27": {
+    name: "TYRANT",
+    ticker: "$TYRANT",
+    telegram: "https://t.me/FotdETH",
+    contract: "0x8ee325ae3e54e83956ef2d5952d3c8bc1fa6ec27",
+    media:
+      "CgACAgQAAx0CcB6ytwADYWNc2-Q-XBjRoKo_ryUkkeDmHyQkAAJvDQACcX_pUgKg-LJaHOrRKgQ",
+    chatId: -1001842493016,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x8ee325ae3e54e83956ef2d5952d3c8bc1fa6ec27&use=v2&chain=mainnet"
   }
 };
 
