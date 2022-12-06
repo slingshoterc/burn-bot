@@ -135,27 +135,16 @@ const projects = {
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x4a10abd5f2b9bd278ac6df80bcf7e6f01c97305b&use=v2&chain=mainnet"
   },
-  "0xa48e53e0cfd9f146c5ff6be26cb646dc0c8b21fb": {
-    name: "BLAZE",
-    ticker: "$BLAZE",
-    telegram: "https://t.me/blazedragonportal",
-    contract: "0xa48e53e0cfd9f146c5ff6be26cb646dc0c8b21fb",
+  "0x1a5f56200194438641609c0d53bc3c8f8911054c": {
+    name: "TSUKA 2.0",
+    ticker: "$TSUKA 2.0",
+    telegram: "https://t.me/dejitarutsuka2portal",
+    contract: "0x1a5f56200194438641609c0d53bc3c8f8911054c",
     media:
-      "BAACAgQAAx0CcB6ytwACAiljiIFjsLZkH6NYI0NRLM4IY5ci5gACiCAAApHrQFDztq0ciHRUxysE",
-    chatId: -1001842493016,
+      "CgACAgQAAx0CcB6ytwACAitjj8dGKvqYjQPvm1E9vR8ajK6iRAACrQwAAjEcgVAcCTvsIzM41SsE",
+    chatId: -1001810498432,
     buyLink:
-      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xa48e53e0cfd9f146c5ff6be26cb646dc0c8b21fb&use=v2&chain=mainnet"
-  },
-  "0x8ee325ae3e54e83956ef2d5952d3c8bc1fa6ec27": {
-    name: "TYRANT",
-    ticker: "$TYRANT",
-    telegram: "https://t.me/FotdETH",
-    contract: "0x8ee325ae3e54e83956ef2d5952d3c8bc1fa6ec27",
-    media:
-      "CgACAgQAAx0CcB6ytwADYWNc2-Q-XBjRoKo_ryUkkeDmHyQkAAJvDQACcX_pUgKg-LJaHOrRKgQ",
-    chatId: -1001842493016,
-    buyLink:
-      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x8ee325ae3e54e83956ef2d5952d3c8bc1fa6ec27&use=v2&chain=mainnet"
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x1a5f56200194438641609c0d53bc3c8f8911054c&use=v2&chain=mainnet"
   }
 };
 
