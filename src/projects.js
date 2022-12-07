@@ -145,6 +145,17 @@ const projects = {
     chatId: -1001810498432,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x1a5f56200194438641609c0d53bc3c8f8911054c&use=v2&chain=mainnet"
+  },
+  "0xebe05c1fc5a8ceb0fc3c1d2c22097bde76cb1773": {
+    name: "KARMA",
+    ticker: "$KARMA",
+    telegram: "https://t.me/karma_erc20",
+    contract: "0xebe05c1fc5a8ceb0fc3c1d2c22097bde76cb1773",
+    media:
+      "BAACAgQAAx0CcB6ytwACAixjj9tHkdslNjjz0dToOmJ9ccdvngACwQwAAjEcgVC84F_O1-YGUSsE",
+    chatId: -1001617073359,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xebe05c1fc5a8ceb0fc3c1d2c22097bde76cb1773&use=v2&chain=mainnet"
   }
 };
 
