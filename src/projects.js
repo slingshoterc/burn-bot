@@ -156,6 +156,17 @@ const projects = {
     chatId: -1001617073359,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xebe05c1fc5a8ceb0fc3c1d2c22097bde76cb1773&use=v2&chain=mainnet"
+  },
+  "0x3174e6e8a3908b378b504d9396906fed7855bb3d": {
+    name: "DEGEN",
+    ticker: "$DEGEN",
+    telegram: "https://t.me/rektdegen",
+    contract: "0x3174e6e8a3908b378b504d9396906fed7855bb3d",
+    media:
+      "BAACAgQAAx0CcB6ytwACAjljlsOuqYJPwKbAbbt8zQzTk4KPrAACMA4AAmptuFDdbhAIPciokCsE",
+    chatId: -1001598529194,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x3174e6e8a3908b378b504d9396906fed7855bb3d&use=v2&chain=mainnet"
   }
 };
 
