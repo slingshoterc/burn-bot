@@ -167,6 +167,17 @@ const projects = {
     chatId: -1001598529194,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x3174e6e8a3908b378b504d9396906fed7855bb3d&use=v2&chain=mainnet"
+  },
+  "0xce81cf156dbd2d8f4e63edc6065740affdde66e9": {
+    name: "RYU",
+    ticker: "$RYU",
+    telegram: "https://t.me/ryukyuportal",
+    contract: "0xce81cf156dbd2d8f4e63edc6065740affdde66e9",
+    media:
+      "BAACAgQAAx0CcB6ytwACAjljlsOuqYJPwKbAbbt8zQzTk4KPrAACMA4AAmptuFDdbhAIPciokCsE",
+    chatId: -1001881060023,
+    buyLink:
+      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xce81cf156dbd2d8f4e63edc6065740affdde66e9&use=v2&chain=mainnet"
   }
 };
 
