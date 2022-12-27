@@ -3,17 +3,6 @@
     We add all subscribed projects to this file for now. Will be migrated to the database when the right time comes.
 */
 const projects = {
-  "0x5a79be6cdce26bc853d72919bf98a0378641b607": {
-    name: "Sling",
-    ticker: "$SLING",
-    telegram: "https://t.me/slingshotportal",
-    contract: "0x5a79be6cdce26bc853d72919bf98a0378641b607",
-    media:
-      "BAACAgQAAx0CZk4yhwACAb1jTE_GgP9-LYXqyt0d4t0zYZdpygACnQsAAsiQYVLatKHbax56CioE",
-    chatId: -1001881060023, //-1001715624415,
-    buyLink:
-      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x5a79be6cdce26bc853d72919bf98a0378641b607&use=v2&chain=mainnet"
-  },
   "0xc68a4c68f17fed266a5e39e7140650acadfe78f8": {
     name: "Runestone",
     ticker: "$RUNE",
@@ -24,50 +13,6 @@ const projects = {
     chatId: -1001371904199,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xc68a4c68f17fed266a5e39e7140650acadfe78f8&use=v2&chain=mainnet"
-  },
-  "0x82c2f739f4af3b401a9f78d9a0d6844db485f098": {
-    name: "Simba Inu",
-    ticker: "$SIMBA",
-    telegram: "https://t.me/kingsimbainu",
-    contract: "0x82c2f739f4af3b401a9f78d9a0d6844db485f098",
-    media:
-      "BAACAgEAAx0CZk4yhwACAgpjTnALPBO1yLwUd86PU7awo3icxAACqgMAAiPIcEYCQuDiaz1tzyoE",
-    chatId: -1001671138082,
-    buyLink:
-      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x82c2f739f4af3b401a9f78d9a0d6844db485f098&use=v2&chain=mainnet"
-  },
-  "0xd804d1270ba889636822e018a88d0a3dbe83e18a": {
-    name: "The ElonYe protocol",
-    ticker: "$ELONYE",
-    telegram: "https://t.me/ElonyeProtocolETH",
-    contract: "0xd804d1270ba889636822e018a88d0a3dbe83e18a",
-    media:
-      "BAACAgEAAx0CYzb8-gADoWNWNrWuUNSK5cPT9lvQErpkMUi4AAJIAgAC0YexRqRxmj7qiT69KgQ",
-    chatId: -1001866506529,
-    buyLink:
-      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd804d1270ba889636822e018a88d0a3dbe83e18a&use=v2&chain=mainnet"
-  },
-  "0x837556300973e496e220bd9cb0ec701cdde9d3ef": {
-    name: "APED",
-    ticker: "$APED",
-    telegram: "https://t.me/Apedportal",
-    contract: "0x837556300973e496e220bd9cb0ec701cdde9d3ef",
-    media:
-      "BAACAgEAAx0CYzb8-gADoWNWNrWuUNSK5cPT9lvQErpkMUi4AAJIAgAC0YexRqRxmj7qiT69KgQ",
-    chatId: -1001841312251,
-    buyLink:
-      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x837556300973e496e220bd9cb0ec701cdde9d3ef&use=v2&chain=mainnet"
-  },
-  "0x4b9f500ed7c571fca3bf049b877faa0ba131fc76": {
-    name: "MWII",
-    ticker: "$MWII",
-    telegram: "https://t.me/CallOfDutyERC",
-    contract: "0x4b9f500ed7c571fca3bf049b877faa0ba131fc76",
-    media:
-      "BAACAgQAAx0CcB6ytwADX2Nb7ieuIRNJB5DhdBNlDwSHT-PwAAIVDgACcX_hUikhgPsQi0eFKgQ",
-    chatId: -1001636614336,
-    buyLink:
-      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x4b9f500ed7c571fca3bf049b877faa0ba131fc76&use=v2&chain=mainnet"
   },
   "0xd763151f6224cf8e3cb0ea0649f0c1ed4d0fe5aa": {
     name: "NODIP",
@@ -124,17 +69,6 @@ const projects = {
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x59203358d7ddfe80e0abe75b0aa534bc4d22aa7f&use=v2&chain=mainnet"
   },
-  "0x4a10abd5f2b9bd278ac6df80bcf7e6f01c97305b": {
-    name: "CONTAGION",
-    ticker: "$CONT",
-    telegram: "https://t.me/contagionerc20",
-    contract: "0x4a10abd5f2b9bd278ac6df80bcf7e6f01c97305b",
-    media:
-      "BAACAgQAAx0CcB6ytwACAbBjdBvzOFKCmB9IDbCDqOiOEjf2_gACNA4AAoffqFOE4qaqU2IF-isE",
-    chatId: -1001825732689,
-    buyLink:
-      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x4a10abd5f2b9bd278ac6df80bcf7e6f01c97305b&use=v2&chain=mainnet"
-  },
   "0x1a5f56200194438641609c0d53bc3c8f8911054c": {
     name: "TSUKA 2.0",
     ticker: "$TSUKA 2.0",
@@ -167,17 +101,6 @@ const projects = {
     chatId: -1001598529194,
     buyLink:
       "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x3174e6e8a3908b378b504d9396906fed7855bb3d&use=v2&chain=mainnet"
-  },
-  "0xce81cf156dbd2d8f4e63edc6065740affdde66e9": {
-    name: "RYU",
-    ticker: "$RYU",
-    telegram: "https://t.me/ryukyuportal",
-    contract: "0xce81cf156dbd2d8f4e63edc6065740affdde66e9",
-    media:
-      "BAACAgQAAx0CcB6ytwACAjljlsOuqYJPwKbAbbt8zQzTk4KPrAACMA4AAmptuFDdbhAIPciokCsE",
-    chatId: -1001881060023,
-    buyLink:
-      "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xce81cf156dbd2d8f4e63edc6065740affdde66e9&use=v2&chain=mainnet"
   }
 };
 
